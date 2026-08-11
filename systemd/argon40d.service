@@ -1,0 +1,19 @@
+[Unit]
+Description=Argon40 case fan, button, OLED, and RTC service
+After=local-fs.target
+Before=shutdown.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/sbin/argon40d
+Restart=on-failure
+RestartSec=5s
+KillSignal=SIGTERM
+TimeoutStopSec=10s
+
+# Root is currently required for GPIO/I2C access, host clock changes, and reboot/poweroff.
+User=root
+
+[Install]
+WantedBy=multi-user.target
+

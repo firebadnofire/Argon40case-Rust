@@ -1,0 +1,46 @@
+[package]
+name = "argon40"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "Pure-Rust services and tools for Argon40 Raspberry Pi cases and HATs"
+publish = false
+
+[lib]
+name = "argon40"
+path = "rust/lib.rs"
+
+[[bin]]
+name = "argon40d"
+path = "rust/bin/argon40d.rs"
+
+[[bin]]
+name = "argon40ctl"
+path = "rust/bin/argon40ctl.rs"
+
+[[bin]]
+name = "argon40-shutdown"
+path = "rust/bin/argon40-shutdown.rs"
+
+[dependencies]
+anyhow = "1.0"
+chrono = { version = "0.4", default-features = false, features = ["clock", "std"] }
+clap = { version = "4.5", features = ["derive"] }
+env_logger = "0.11"
+gpiocdev = "0.8"
+i2cdev = "0.6"
+log = "0.4"
+nix = { version = "0.30", default-features = false, features = ["fs", "time"] }
+serialport = { version = "4.7", default-features = false }
+signal-hook = "0.3"
+thiserror = "2.0"
+
+[dev-dependencies]
+tempfile = "3.20"
+
+[profile.release]
+lto = "thin"
+strip = true
+
+[lints.rust]
+unsafe_code = "forbid"
