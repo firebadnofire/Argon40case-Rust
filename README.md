@@ -84,10 +84,20 @@ The service currently runs as root because it needs GPIO/I2C access, permission 
 
 ## Installation
 
-Build natively on the Pi, or copy compatible release binaries to the Pi together in one directory. From a native checkout:
+On Raspberry Pi OS on a Raspberry Pi 4B, clone or copy this repository to the Pi and run:
 
 ```text
-cargo build --release
+./install.sh
+```
+
+Run the script as your normal user. It verifies Rust 1.85 or newer, builds the locked dependency set in release mode, uses `sudo` only for the system install, and enables `argon40d`. It refuses to start a second hardware owner if the legacy `argononed.service` or `argoneond.service` is active. The script does not install Rust or silently alter Raspberry Pi boot configuration; complete the prerequisites above first.
+
+To install without enabling the daemon, use `./install.sh --no-enable`. To exercise the complete install layout without modifying the host, use `./install.sh --root /tmp/argon40-stage`.
+
+The equivalent manual commands are:
+
+```text
+cargo build --locked --release
 sudo target/release/argon40ctl install
 ```
 
@@ -170,13 +180,39 @@ Stop `argon40d` before direct fan writes so two owners do not fight over the MCU
 
 ## Power button and shutdown
 
-GPIO line 4 pulses are classified with monotonic edge timestamps:
+The physical button does not send Linux a literal "single click" or "double click." The case MCU recognizes a gesture and reports it as a coded pulse on GPIO line 4. These classifier values are compiled-in defaults; the three legacy config files do not remap them.
 
-- 20-30 ms: reboot
-- 40-50 ms: shutdown
-- 60-70 ms: next OLED page
+| Physical gesture while the Pi is running | GPIO pulse reported by the MCU | Configured Rust action |
+| --- | --- | --- |
+| Single/short tap on Argon ONE | No software pulse | No software action |
+| Short OLED/page button gesture on Argon EON | 60-70 ms | Advance to the next enabled OLED page |
+| Double tap | 20-30 ms | Request an orderly reboot with `systemctl reboot` |
+| Hold for 3-5 seconds, then release | 40-50 ms | Request an orderly shutdown with `systemctl poweroff` |
+| Any other pulse width | Anything outside the ranges above | Log and ignore |
 
-Other durations are logged and ignored. Reboot invokes `systemctl reboot`; shutdown invokes `systemctl poweroff`.
+The 20–70 ms figures are the MCU's output pulse lengths measured by the daemon, not how long the user should press the button. Button behavior can vary between Argon models and MCU firmware. In particular, do not interpret an Argon ONE single tap as the EON page-switch action. Holding beyond roughly 5 seconds can reach the case firmware's forced power-cut path; that is a hardware action outside this software mapping and may not permit an orderly shutdown.
+
+The checked-in service starts in **diagnostic mode**, so a fresh installation only logs the rising edge, falling edge, measured pulse, and classified action. It does not reboot, shut down, or switch an OLED page. After confirming the pulse measurements on the attached case, open a systemd override:
+
+```text
+sudo systemctl edit argon40d.service
+```
+
+Enter:
+
+```ini
+[Service]
+ExecStart=
+ExecStart=/usr/local/sbin/argon40d --button-actions
+```
+
+Then apply it:
+
+```text
+sudo systemctl daemon-reload
+sudo systemctl restart argon40d.service
+journalctl -u argon40d.service -f
+```
 
 At the final systemd shutdown stage, `argon40-shutdown` always stops the fan and clears/powers off the OLED. For `halt` or `poweroff`, it also clears RTC event flags and sends byte `0xff` to MCU address `0x1a`. For `reboot`, it deliberately does not send `0xff`.
 

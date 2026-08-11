@@ -8,6 +8,7 @@ This document is a compact context map for an agentic code model working on the 
 
 ```text
 Cargo.toml / Cargo.lock
+install.sh                  Raspberry Pi OS build/install entry point
 rust/
 ├── lib.rs                  Module exports and hardware addresses
 ├── button.rs               Pure pulse classification
