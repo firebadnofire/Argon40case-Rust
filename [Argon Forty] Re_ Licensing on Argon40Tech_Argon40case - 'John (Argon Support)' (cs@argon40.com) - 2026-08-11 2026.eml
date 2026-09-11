@@ -1,0 +1,233 @@
+Return-Path: <cs@argon40.com>
+X-Original-To: william.jones@archuser.org
+Delivered-To: william.jones@archuser.org
+Authentication-Results: mail.archuser.org;
+	dkim=pass (2048-bit key; unprotected) header.d=zendesk.com header.i=@zendesk.com header.a=rsa-sha256 header.s=zendesk2 header.b=cWydE/Mt;
+	dkim-atps=neutral
+X-Spam-Checker-Version: SpamAssassin 4.0.0 (2022-12-13) on localhost
+X-Spam-Level: 
+X-Spam-Status: No, score=-1.0 required=5.0 tests=DKIMWL_WL_HIGH,DKIM_SIGNED,
+	DKIM_VALID,HTML_FONT_LOW_CONTRAST,HTML_MESSAGE,NO_RECEIVED,NO_RELAYS,
+	T_REMOTE_IMAGE,URIBL_BLOCKED,URIBL_DBL_BLOCKED_OPENDNS autolearn=ham
+	autolearn_force=no version=4.0.0
+Date: Wed, 12 Aug 2026 00:26:03 +0000
+From: "John (Argon Support)" <cs@argon40.com>
+Reply-To: Argon Support <cs@argon40.com>
+To: william jones <william.jones@archuser.org>
+Message-ID: <PY5N73921P1_6a7bbd9ae946e_5c1bb987684940_sprut@zendesk.com>
+In-Reply-To: <fea54850-7d70-4a8b-95c1-1bc06270b728@archuser.org>
+References: <PY5N73921P1@zendesk.com>
+ <fea54850-7d70-4a8b-95c1-1bc06270b728@archuser.org>
+Subject: [Argon Forty] Re: Licensing on Argon40Tech/Argon40case
+Mime-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--==_mimepart_6a7bbd9b8759_18818684498";
+ charset=utf-8
+Content-Transfer-Encoding: 7bit
+X-Delivery-Context: rule-2-event-id-17187950649743
+X-Zendesk-From-Account-Id: 436ce7a
+Auto-Submitted: auto-generated
+X-Auto-Response-Suppress: All
+X-Mailer: Zendesk Mailer
+X-Zendesk-Email-Id: 01KZSNS93YXRRD0DQFYP7WSHQJ
+DKIM-Signature:  v=1; a=rsa-sha256; c=relaxed/relaxed; d=zendesk.com;
+ q=dns/txt; s=zendesk2; t=1786494363;
+ bh=3Ut82jRQPxty3ShBzItLY2waI0i2qZdcGIn7jJXa4SE=;
+ h=date:from:reply-to:to:message-id:in-reply-to:references:subject:mime-version:content-type:content-transfer-encoding;
+ b=cWydE/Mt8imOymU91ACd6epcsIiQxROf2D8Dwys69KjXNxle0InQ1hQDsv9Rfe6EeaE1kznROnJrz3d89dfp5xpa2jcxmL1HYDMIqmwGvieHns/826iKb+1f0uZ5UmCKfDz0ureCXUo6yb2CcLpHpGmNAuCqFk/LT3pgXpbWBHqXTdzd7JDo+/TmNIfl09cLMYAikFwtw/EmSbBxCXO7LHQwxoGW+3VoKQqOHOHQzb3WV7xNM3VPiVhW9dNjpFw/RAO92gpc5Z9Pdk4h8LV6tNdoWM1wcLM4Tnn0vvt4AxnwyeKgcdxtSmpDQe3DRmANTENVD3SwwcClSXAMGcK4+g==
+
+
+----==_mimepart_6a7bbd9b8759_18818684498
+Content-Type: text/plain;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+##- Please type your reply above this line -##
+
+Your request (21938) has been updated. To add additional comments, reply =
+to this email.
+----------------------------------------------
+
+John, 12 Aug 2026, 08:26 GMT+8
+
+Hi,
+
+We publish our code to GitHub so that users can freely access it, whether=
+ to build upon it or modify it for their specific use cases.
+
+Regards,
+
+----------------------------------------------
+
+william jones, 12 Aug 2026, 04:16 GMT+8
+
+Hello,
+
+I=E2=80=99m reaching out regarding the Argon40Tech/Argon40case repository=
+ on GitHub. I noticed that the repository does not currently include a li=
+cense.
+
+I=E2=80=99m working on a Raspberry Pi project that integrates the Argon O=
+NE case logic, and I would like to create a Rust-based port of the existi=
+ng Argon40 scripts. My intention is to make the Rust implementation open =
+source and distribute it as part of the project and as its own repo for u=
+se on any OS.
+
+Would Argon40 be willing to grant permission to modify and redistribute t=
+he code from the repository for this purpose? If so, is there a particula=
+r license or set of terms you would like the resulting work to follow?
+
+Alternatively, if you are planning to add an open-source license to the r=
+epository, I would be happy to follow that license.
+
+Thank you for your time,
+
+William Jones
+
+--------------------------------
+This email is a service from Argon Forty.
+
+
+
+
+
+
+
+
+
+[PY5N73-921P1]=
+
+----==_mimepart_6a7bbd9b8759_18818684498
+Content-Type: text/html;
+ charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html><html><head>
+  <meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8=
+">
+  <style type=3D"text/css">
+    table td {
+      border-collapse: collapse;
+    }
+    body[dir=3Drtl] .directional_text_wrapper { direction: rtl; unicode-b=
+idi: embed; }
+
+  </style>
+
+          <style type=3D"text/css">
+            @media only screen and (max-width: 768px) {
+              .simplified-email-footer .namecard {
+                display: block;
+                min-width: 100%;
+                padding: 0 0 16px 0; }
+
+              .simplified-email-footer .content {
+                padding: 16px; }
+            }
+          </style>
+        </head>
+<body lang=3D"en-gb" style=3D"width: 100%!important; margin: 0; padding: =
+0;">
+  <div style=3D"padding: 10px; line-height: 1.5; font-family: 'Lucida Gra=
+nde',Verdana,Arial,sans-serif; font-size: 12px; color:#444444;">
+    <p dir=3D"ltr">Your request (21938) has been updated. To add addition=
+al comments, reply to this email.<br></p><div style=3D"margin-top: 25px" =
+data-version=3D"2"><table class=3D"zd-liquid-comment" width=3D"100%" cell=
+padding=3D"0" cellspacing=3D"0" border=3D"0" role=3D"presentation">  <tbo=
+dy><tr>    <td width=3D"100%" style=3D"padding: 15px 0; border-top: 1px d=
+otted #c5c5c5;">      <table width=3D"100%" cellpadding=3D"0" cellspacing=
+=3D"0" border=3D"0" style=3D"table-layout:fixed;" role=3D"presentation"> =
+       <tbody><tr>                      <td valign=3D"top" style=3D"paddi=
+ng: 0 15px 0 15px; width: 40px;">              <img width=3D"40" height=3D=
+"40" alt=3D"" style=3D"height: auto; line-height: 100%; outline: none; te=
+xt-decoration: none; -webkit-border-radius: 5px; -moz-border-radius: 5px;=
+ border-radius: 5px;" src=3D"https://argon40help.zendesk.com/images/2016/=
+default-avatar-80.png">            </td>                    <td width=3D"=
+100%" style=3D"padding: 0; margin: 0;" valign=3D"top">            <p styl=
+e=3D"font-family:'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Verd=
+ana,Tahoma,sans-serif; font-size: 15px; line-height: 18px; margin-bottom:=
+ 0; margin-top: 0; padding: 0; color:#1b1d1e;" dir=3D"ltr">              =
+                                  <strong>John</strong> (Argon Forty)    =
+                                      </p>            <p style=3D"font-fa=
+mily:'Lucida Grande','Lucida Sans Unicode','Lucida Sans',Verdana,Tahoma,s=
+ans-serif; font-size: 13px; line-height: 25px; margin-bottom: 15px; margi=
+n-top: 0; padding: 0; color:#bbbbbb;" dir=3D"ltr">              12 Aug 20=
+26, 08:26 GMT+8            </p>                                    <div c=
+lass=3D"zd-comment" dir=3D"auto" style=3D"color: #2b2e2f; line-height: 22=
+px; margin: 15px 0;">Hi,<br>&nbsp;<br>We publish our code to GitHub so th=
+at users can freely access it, whether to build upon it or modify it for =
+their specific use cases.<br>&nbsp;<br>Regards,<br></div><p dir=3D"ltr"> =
+                     </p></td>        </tr>      </tbody></table>    </td=
+>  </tr></tbody></table><p dir=3D"ltr"></p><table class=3D"zd-liquid-comm=
+ent" width=3D"100%" cellpadding=3D"0" cellspacing=3D"0" border=3D"0" role=
+=3D"presentation">  <tbody><tr>    <td width=3D"100%" style=3D"padding: 1=
+5px 0; border-top: 1px dotted #c5c5c5;">      <table width=3D"100%" cellp=
+adding=3D"0" cellspacing=3D"0" border=3D"0" style=3D"table-layout:fixed;"=
+ role=3D"presentation">        <tbody><tr>                      <td valig=
+n=3D"top" style=3D"padding: 0 15px 0 15px; width: 40px;">              <i=
+mg width=3D"40" height=3D"40" alt=3D"" style=3D"height: auto; line-height=
+: 100%; outline: none; text-decoration: none; -webkit-border-radius: 5px;=
+ -moz-border-radius: 5px; border-radius: 5px;" src=3D"https://argon40help=
+.zendesk.com/images/2016/default-avatar-80.png">            </td>        =
+            <td width=3D"100%" style=3D"padding: 0; margin: 0;" valign=3D=
+"top">            <p style=3D"font-family:'Lucida Grande','Lucida Sans Un=
+icode','Lucida Sans',Verdana,Tahoma,sans-serif; font-size: 15px; line-hei=
+ght: 18px; margin-bottom: 0; margin-top: 0; padding: 0; color:#1b1d1e;" d=
+ir=3D"ltr">                              <strong>william jones</strong>  =
+                        </p>            <p style=3D"font-family:'Lucida G=
+rande','Lucida Sans Unicode','Lucida Sans',Verdana,Tahoma,sans-serif; fon=
+t-size: 13px; line-height: 25px; margin-bottom: 15px; margin-top: 0; padd=
+ing: 0; color:#bbbbbb;" dir=3D"ltr">              12 Aug 2026, 04:16 GMT+=
+8            </p>                                    <div class=3D"zd-com=
+ment zd-comment-pre-styled" dir=3D"auto"><p dir=3D"ltr">Hello,<span></spa=
+n></p><p dir=3D"ltr">I=E2=80=99m reaching out regarding the&nbsp;<a href=3D=
+"https://github.com/Argon40Tech/Argon40case" rel=3D"noreferrer">Argon40Te=
+ch/Argon40case</a>&nbsp;repository
+ on GitHub. I noticed that the repository does not currently
+ include a license.</p><p dir=3D"ltr">I=E2=80=99m working on a Raspberry =
+Pi
+ project that integrates the Argon ONE case logic, and I would like
+ to create a Rust-based port of the existing Argon40 scripts. My
+ intention is to make the Rust implementation open source and
+ distribute it as part of the project and as its own repo for use
+ on any OS.</p><p dir=3D"ltr">Would Argon40 be willing to grant
+ permission to modify and redistribute the code from the repository
+ for this purpose? If so, is there a particular license or set of
+ terms you would like the resulting work to follow?</p><p dir=3D"ltr">Alt=
+ernatively, if you are
+ planning to add an open-source license to the repository, I would
+ be happy to follow that license.</p><p dir=3D"ltr">Thank you for your ti=
+me,</p><p dir=3D"ltr">William Jones</p></div><p dir=3D"ltr">             =
+         </p></td>        </tr>      </tbody></table>    </td>  </tr></tb=
+ody></table></div>
+  </div>
+  <div style=3D"padding: 10px; line-height: 1.5; font-family: 'Lucida Gra=
+nde',Verdana,Arial,sans-serif; font-size: 12px; color: #aaaaaa; margin: 1=
+0px 0 14px 0; padding-top: 10px; border-top: 1px solid #eeeeee;">
+    <br><div class=3D"fb-container"><span style=3D"color:#313940; font-si=
+ze:12px; text-align:left"> Message us on</span><div class=3D"fb-social-bu=
+ttons"><table cellpadding=3D"3" cellspacing=3D"2" style=3D"display: inlin=
+e-table"><tbody><tr>    <td>
+       <a href=3D"http://m.me/argon40" style=3D"cursor:pointer; text-deco=
+ration:none;">
+       <img height=3D"16" width=3D"16" alt=3D"messenger logo" src=3D"http=
+s://static.zdassets.com/classic/images/brands/social_buttons/messenger_fo=
+oter.png">
+       </a>
+     </td>
+</tr></tbody></table></div></div>This email is a service from Argon Forty=
+. Delivered by <a href=3D"https://www.zendesk.co.uk/service/?utm_campaign=
+=3Dtext&amp;utm_content=3DArgon+Forty&amp;utm_medium=3Dpoweredbyzendesk&a=
+mp;utm_source=3Demail-notification" style=3D"color:black;" target=3D"_bla=
+nk">Zendesk</a>
+  </div>
+<span style=3D"color:#FFFFFF" aria-hidden=3D"true" class=3D"zd_encoded_id=
+">[PY5N73-921P1]</span>
+
+<div itemscope=3D"" itemtype=3D"http://schema.org/EmailMessage" style=3D"=
+display:none">  <div itemprop=3D"action" itemscope=3D"" itemtype=3D"http:=
+//schema.org/ViewAction">    <link itemprop=3D"url" href=3D"https://argon=
+40help.zendesk.com/hc/requests/21938">    <meta itemprop=3D"name" content=
+=3D"View ticket">  </div></div></body></html>=
+
+----==_mimepart_6a7bbd9b8759_18818684498--
